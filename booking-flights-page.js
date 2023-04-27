@@ -27,12 +27,12 @@ if(inputArrays != null){
     } else {
         $("#date-to").text(dateTo);
     }
-    $(".adt-price").text("$" + objPrice + " / adult");
+    $(".adt-price").text("$" + parseFloat(objPrice).toFixed(0) + " / adult");
     if(chdQty > 0){
         $(".chd-price").removeClass("hidden");
-        $("#chd-price").text("$" + parseFloat(objPrice)*0.85 + " / child");
+        $("#chd-price").text("$" + parseFloat(objPrice)*0.85.toFixed(0) + " / child");
     }
-    var grandPrice = parseFloat(objPrice) * (parseFloat(adtQty) + parseFloat(chdQty)*0.85);
+    var grandPrice = parseFloat(objPrice) * (parseFloat(adtQty) + parseFloat(chdQty)*0.85).toFixed(0);
     $(".grand-price").text("$" + grandPrice);
 }
 if(adtQty > 0){

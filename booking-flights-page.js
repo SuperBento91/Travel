@@ -32,7 +32,7 @@ if(inputArrays != null){
         $(".chd-price").removeClass("hidden");
         $("#chd-price").text("$" + parseFloat(objPrice)*0.85.toFixed(0) + " / child");
     }
-    var grandPrice = parseFloat(objPrice) * (parseFloat(adtQty) + parseFloat(chdQty)*0.85).toFixed(0);
+    var grandPrice = parseFloat(objPrice).toFixed(0) * (parseFloat(adtQty) + parseFloat(chdQty)*0.85).toFixed(0);
     $(".grand-price").text("$" + grandPrice);
 }
 if(adtQty > 0){
